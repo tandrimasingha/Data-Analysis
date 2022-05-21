@@ -14,7 +14,8 @@
 
 ## 📊 Overview of the App
 
-Welcome to AutoCARs. Here you can get a complete analysis and recent trends about all types of Car in Automotive Industry. You can demonstrate how the Automotive Industry could harness data to take informed decisions. <br>
+Welcome to AutoCARs. Here you can get a complete analysis and recent trends about all types of Car in Automotive Industry. You can demonstrate how the Automotive Industry could harness data to take informed decisions.
+The project aims to perform various visualizations and provide various insights from the considered Indian automobile dataset by performing data analysis that utilizing machine learning algorithms in Python programming language. The considered dataset is of Indian cars that consists of various features. The insights that could be estimated from this dataset would be feature such as price of a specific car model that could be estimated using the other attributes of that particular car model using machine learning algorithms.<br>
 The secions include:-
 
 **1. Car Sales Analysis in Ukraine**
