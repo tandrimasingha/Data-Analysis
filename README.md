@@ -2,14 +2,17 @@
            Automotive industry - All Analysis about Car
 </h1>
 
-![slide-1](https://user-images.githubusercontent.com/78292851/169604795-dd46ff98-41cb-48b3-bf05-5e38d291870f.jpg)
-<br><br>
+*****
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/tandrimasingha/Data-Analysis?label=Last%20commit&color=green&logo=git&logoColor=white&style=flat-square)](https://github.com/tandrimasingha/Data-Analysis)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/tandrimasingha/Data-Analysis?label=Code%20size&logo=python&logoColor=white&style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tandrimasingha/Data-Analysis?label=Repo%20size&color=red&logo=github&logoColor=white&style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/tandrimasingha/Data-Analysis?label=Stars&logo=github&style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/tandrimasingha/Data-Analysis?label=Issues&color=yellow&logo=github&style=flat-square)
+
+![slide-1](https://user-images.githubusercontent.com/78292851/169604795-dd46ff98-41cb-48b3-bf05-5e38d291870f.jpg)
+<br><br>
+
 
 
 ## 📊 Overview of the App
@@ -36,5 +39,41 @@ The secions include:-
 ![image](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)&nbsp;&nbsp;
 ![image](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)&nbsp;&nbsp;
 
+## UI Of The Web Application
 
-</p>
+### 1. Home Page
+<pre>
+<img src="https://user-images.githubusercontent.com/78292851/169812477-85a38d27-d030-4110-8c36-8b3c00c3bf0e.png" width="1010"> 
+</pre>
+
+### 2. About Us
+<pre>
+<img src="https://user-images.githubusercontent.com/78292851/169812777-9759e7fb-b677-45c3-8f49-2d8130eb3efd.png" width="1010"> 
+</pre>
+
+### 3. Services Section
+<pre>
+<img src="https://user-images.githubusercontent.com/78292851/169814007-31865af6-b4e1-47e4-90d2-c74958e1aa38.png" width="1010"> 
+</pre>
+
+
+### 4. Car Sales Analysis in Ukraine Section
+<pre>
+<img src="" width="1000"> <img src="" width="1000">
+</pre>
+
+### 5. Car Sales Analysis in US Section
+<pre>
+<img src="" width="1010"> <img src="" width="1010">
+</pre>
+
+### 6. Car Price Prediction Section
+<pre>
+<img src="" width="1010"> <img src="" width="1010">
+</pre>
+
+### 7. Contact Section
+<pre>
+<img src="https://user-images.githubusercontent.com/78292851/169813945-a45eef32-58f8-4a2a-8e39-d3e571daf567.png" width="1010"> 
+</pre>
+
