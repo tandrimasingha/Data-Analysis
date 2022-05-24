@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Car Sales Market Analysis</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    body {
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #ebb19f, #ecabc4, #c1eeff, #b0ebdd);
+      background-size: 50000% 50000%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    .main {
+      margin: auto;
+      max-width: fit-content;
+      padding: 10px;
+    }
+
+    h1 {
+      color: black;
+      font-family: cursive;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* .inner{
+  position:absolute;
+  } */
+    .container {
+      padding: 20px;
+      background-color: blanchedalmond;
+      margin-top: 25px;
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 5px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    p {
+      color: black;
+      font-family: cursive;
+
+    }
+
+    .containerf {
+      padding: 10px;
+      background-color: #aefce8;
+      margin: auto;
+      width: 50%;
+      height: fit-content;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 5px;
+      border: 2px solid black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+ <body>
+   <div class="main">
+    <div class="containerf">
+      <a href="#" style="text-decoration: none;">
+        <h1>Car Sales Analysis in Ukraine</h1>
+      </a>
+    </div>
+    <div class="container" style="width: 80%; align-items: center; display: inline-block; ">
+      <p class='intro'>This section of analysis helps us to understand the following trends
+        In the past few years, prices of new cars have skyrocketed, due to which most people are incapable of buying a new one.
+       Customers buying a new car always looks for assurity of their money to be worthy.
+        But due to the increased price of new cars, used car sales are on a global increase (Pal, Arora and Palakurthy, 2018).
+        There is a need for a used car price prediction system to effectively determine the worthiness of the car using a variety of features.
+        The company has earned its name because of sincerity in work and quality of services.
+        But for past few months their sales is down for some reason and they are unable to figure it out.</p>
+    </div>
+    <div class="container" style="width: 60%; align-items: center; display: inline-block; ">
+      <div id='chart' class='chart'></div>
+      <h2><b>Which car manufacturer had highest sales</b></h2>
+      <p class='chart'>From the dataset, the top performing car sales are from following manufacturers:
+          <br>
+        1. Volkswagen 927 <br>
+        2. Mercedes-Benz 885 <br>
+        3. BMW 684<br>
+        4. Toyota 529<br>
+        5. VAZ 488</p>
+    </div>
+    <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+      <div id='chart2' class='chart2 inner'></div>
+      <h2><b>What is the sales trend for top selling car manufacturers?</b></h2>
+      <p>By seeing this plot we can conclude: <br>
+        1. Overall Volkswagen used car are reported high sales and occupies 1st place, but the saleas are not performing very low in the recent past.<br>
+        2. Mercedes-Benz significantly performing best sales and followed by BMW. These brands sales are sky rocketed and proven the customer trust.<br>
+        3. Toyota cars are consistant in sales and keeping their position.<br>
+        4. On flip side, Volkswagen and Vaz car sales are under performing in recently..</p>
+    </div>
+    <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+      <div id='chart3' class='chart3 inner'></div>
+      <h2><b>What is the sales trend for top selling car manufacturers?</b></h2>
+      <p>We can get a vast observation from here: <br>
+        1. Overall Volkswagen used car are reported high sales and occupies 1st place, but the saleas are not performing very low in the recent past.<br>
+        2. Mercedes-Benz significantly performing best sales and followed by BMW. These brands sales are sky rocketed and proven the customer trust.<br>
+        3. Toyota cars are consistant in sales and keeping their position.<br>
+        4. On flip side, Volkswagen and Vaz car sales are under performing in recently..</p>
+    </div>
+    <div class="container left" style="width: 80%;justify-content: center; align-items: center; display: inline-block; ">
+      <div id='chart4' class='chart4'  style="width: 45% ; float:left;"></div>
+    <div id='chart5' class='chart5 inner' style="width: 45% ;float:right;"></div>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <h2 style="text-align: center;justify-content: center; align-items: center;"><b> Which cars gain or loose the market?</b></h2>
+    <p style="text-align: center; justify-content: center; align-items: center;">The Overview or conclusion we could draw from this plot is: <br>
+      Following are the brands which loose the market<br>
+      VAZ,
+      Moskvich-AZLK,
+      Lincoln,
+      UAZ,
+      GAZ,
+      Opel,
+      Mazda,
+      Volvo,
+      Fiat,
+      Peugeot,
+      Daewoo,
+      Chevrolet <br><br>
+      Following are the brands which gain/sustain the market<br>
+
+        Audi,
+        Ford,
+        Mercedes-Benz,
+        Volkswagen,
+        BMW,
+        Nissan,
+        Toyota,
+        Mitsubishi,
+        Renault,
+        Skoda,
+        Hyundai,
+        Honda
+    </p>
+  </div>
+
+    <div class="container left" style="width: 70%; align-items: center; display: inline-block; ">
+      <div id='chart6' class='chart6'></div>
+      <h2><b>Which car manufacturer had highest sales</b></h2>
+      <p>Top 10 premium car's sales reported as follows.<br><br>
+
+        Bentley
+        -----Mulsanne, Bentayga, Flying Spur <br>
+        Mercedes-Benz---- S 600, G 500, S-Guard <br>
+        Land Rover---- Range Rover <br>
+        Sales of these cars gives interesting result-----
+        1. Though Mercedes-Benz and Land Rover are proven strength in sales under Premium sector, neverthless Bentley dominating recently in this segment.<br>
+        2. Following cars are reported premium car sales in recent years:
+        Bentley, 
+        Mercedes-Benz,
+        Land Rover,
+        Ferrari,
+        Toyota,
+        Tesla,
+        Lexus,
+        Cadillac,
+        BMW,
+        Lamborghini <br>
+       3. But latest reported high priced cars sold as below.
+        Lamborghini - 2008,
+        Mercedes-Benz & Ferrari - 2012
+        4. There are no such high priced cars sold from 2013 till 2015 <br>
+        5. Tremendus sales reported in 2016 for these super premium cars by Bentley, Land Rover, Toyota, Tesla, Lexus, Cardillac & BMW <br>
+        6. It's also worth to note that,
+        Crossovers are leading in this space followed by sedans
+        Preferred to have full wheel and rear wheel drive
+        All these premium cars engine type is Petrol</p>
+    </div>
+
+
+    <div class="container left" style="width: 80%;justify-content: center; align-items: center; display: inline-block; ">
+      <div id='chart7' class='chart7'  style="width: 45% ; float:left;"></div>
+    <div id='chart8' class='chart8 inner' style="width: 45% ;float:right;"></div>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <h2 style="text-align: center;justify-content: center; align-items: center;"><b>What are the sales & revenue in each segment of class ?</b></h2>
+    <p style="text-align: center; justify-content: center; align-items: center;">Observations by the two plots are:
+      Economy Cars are best selling segment followed by Luxury and Premium <br>
+      Though the economy car sales are predominant in sales, but revenues are not impressive.<br>
+      Economy - 18.6%<br>
+      Luxury - 37.2% <br>
+      Premium - 44.2%
+    </p>
+  </div>
+
+    <div class="container right" style="width: 70%; align-items: center; display: inline-block; ">
+      <div id='chart16' class='chart16 inner'></div>
+      <h2><b>What is the average price of cars with respect to engine type and drive?</b></h2>
+      <p>After analyzing this plot we can get a clear understanding about:<br>
+        1. Body type hatch has the most average sum of price.<br>
+        2. Hatch body type has an average sum of price for 6.3M of engine type petrol.<br>
+        3. The sum of price is low for body type crossover<br>
+        4. Sum of price is more for petrol, followed by disel.
+        </p>
+    </div>
+
+
+    <div class="container left" style="width: 80%;justify-content: center; align-items: center; display: inline-block; ">
+      <div id='chart9' class='chart9'  style="width: 45% ; float:left;"></div>
+    <div id='chart10' class='chart10 inner' style="width: 45% ;float:right;"></div>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <h2 style="text-align: center;justify-content: center; align-items: center;"><b>What is the revenue generated in each segment of class ?</b></h2>
+    <p style="text-align: center; justify-content: center; align-items: center;">Observations by the two plots are:<br>
+      1. From the above charts, it is evedent that, Economy car sales are comes to '0', Luxury and Premium takes the momentum of high sales. <br>
+2. In addition the revenue generated by Premium cars is 500% higher than other cars in recent year. <br>
+3. So possible reason of reduced sales due to ground touching Economy class car sales.
+    </p>
+  </div>
+    <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+      <div id='chart11' class='chart11'></div>
+      <h2><b> What is the car sales trend based on body ?</b></h2>
+      <p>This interactive plot gives us the clear analysis that :<br>
+        
+        1. Overall Crossover, Sedan and hatches are more demanded car body types<br>
+        2. It is observed that recent crossover sales are skyrocketing.<br>
+        3. Van and Vagon body types are loosing sales and other cars are gaining market.<br>
+       4.  So possible reason of declining sales are Van & Vagon type cars are loosing market.<br></p>
+    </div>
+
+    <div class="container left" style="width: 80%;justify-content: center; align-items: center; display: inline-block; ">
+      <div id='chart12' class='chart12'  style="width: 45% ; float:left;"></div>
+    <div id='chart13' class='chart13 inner' style="width: 45% ;float:right;"></div>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <h2 style="text-align: center;justify-content: center; align-items: center;"><b> What is the sales trend based on body ?</b></h2>
+    <p style="text-align: center; justify-content: center; align-items: center;">Observations by the two plots are:<br>
+      The first plot is of Overall car sales based on body type and the second one is Recent 5 years car sales based on body type <br>
+      1. Overall Crossover, Sedan and hatches are more demanded car body types<br>
+      2. It is observed that recent crossover sales are skyrocketing.<br>
+      3. Van and Vagon body types are loosing sales and other cars are gaining market.<br>
+     4.  So possible reason of declining sales are Van & Vagon type cars are loosing market.<br>
+    </p>
+  </div>
+
+  <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+    <div id='chart14' class='chart14'></div>
+  
+  </div>
+  <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+    <div id='chart15' class='chart15'></div>
+    <h2><b>  What are the best mileage cars in each segment of 'class' ?</b></h2>
+     <p> Following are the best mileage given cars in each segment.<br>
+       1. Economy --> Kia - Ceed & ZAZ - 1103 <br>
+      2. Luxury --> Volkswagen - Eos & Mercedes-Benz - S 500 <br>
+      3. Premium --> Mercedes-Benz - Sprinter 318 & GL 320</p>
+  </div>
+
+  <div class="container left" style="width: 80%;justify-content: center; align-items: center; display: inline-block; ">
+    <div id='chart17' class='chart17'  style="width: 45% ; float:left;"></div>
+  <div id='chart18' class='chart18 inner' style="width: 45% ;float:right;"></div>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <h2 style="text-align: center;justify-content: center; align-items: center;"><b> What is the car sales by drive ?</b></h2>
+  <p style="text-align: center; justify-content: center; align-items: center;">By the Observations of the two plots we can say that are:<br>
+    The first plot is of Overall car sales based on body type and the second one is Recent 5 years car sales based on body type <br>
+    The first plot is of <i>Overall car sales by drive</i> and second plot is of <i>Latest 5 year car sales by drive</i>
+    1. Overall front is more demanded car drives then comes full and atlast rear<br>
+    2. It is observed that count of front is over 5000.<br>
+    3. Rear is less than 2000 which is less.<br>
+  </p>
+</div>
+
+  <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+    <div id='chart19' class='chart19'></div>
+    <h2><b> How car, car's price and car's body depends on each other? </b></h2>
+    <p>We can see a correlation between the car, its price and its body.</p>
+  </div>
+  <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+    <div id='chart20' class='chart20'></div>
+    <h2><b> How car's price and sales differs with Engine type ?</b></h2>
+    <p>Observationswe get from this plot: <br>
+      1. There are no cars available at 20000 to 36000 price bracket, which is high dense price range<br>
+      2. Though the cars with Gas engine type sold at most economical price, in the recent days customers are not preferred.<br>
+      3. Most preferred engine type is Petrol and Diesel.<br>
+      4. Other engine type cars are gradually increasing in sales despite of its high price.<br>
+      5. Front & Full wheel drive cars mostly opted by customers. Rear wheel drive car sales are declined drastically in last 5 years<br>
+      6. Most sales happening price range is between 10000 to 40000 /- 
+    </p>
+  </div>
+
+
+
+  <div class="container left" style="width: 80%;justify-content: center; align-items: center; display: inline-block; ">
+    <div id='chart21' class='chart21'  style="width: 45% ; float:left;"></div>
+  <div id='chart22' class='chart22 inner' style="width: 45% ;float:right;"></div>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+  <h2 style="text-align: center;justify-content: center; align-items: center;"><b>What is the Sales percentage by engine type?</b></h2>
+  <p style="text-align: center; justify-content: center; align-items: center;">By the Observations of the two plots we can say that are:<br>
+    The first plot is of Overall car sales based on body type and the second one is Recent 5 years car sales based on body type <br>
+    The first plot is of <i>Overall car sales by drive</i> and second plot is of <i>Latest 5 year car sales by drive</i>
+    1. Overall front is more demanded car drives then comes full and atlast rear<br>
+    2. It is observed that count of front is over 5000.<br>
+    3. Rear is less than 2000 which is less.<br>
+  </p>
+</div>
+
+<div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+  <h2><b>Conclusion </b></h2>
+  <p class='intro'>The overall conclusion that we can draw from here is: <br>
+   1. Most sales happening price range is between 10000 to 40000 /-. <br>
+2. There are very few cars sold in 20000 to 36000 price bracket, which is best competitive price range. <br>
+3. Though the cars with Gas engine type sold at most economical price, in the recent days customers are not preferred. <br>
+4. None of the cars sold from Economy segment in year 2016.<br>
+5. Car registrations are most considered in Luxury and Premium cars.<br>
+
+6. Even with effordable price range, gas and other engine type cars are least preferred.<br>
+7. Most preferred engine types are Petrol and Diesel and body types are cross-overs and sedan.<br>
+8. Other type cars are consistent and gradually increasing in sales.<br>
+9. Irrespective of tenure, Sedans are always on demand follows with Cross-over and hatch.<br>
+10. Tremendus sales reported in 2016 for these super premium cars by Bentley, Land Rover, Toyota, Tesla, Lexus, Cardillac & BMW
+recently Crossovers are leading in sales followed by sedans.<br>
+11. Most of the recent premium cars engine type is Petrol.<br>
+
+  </p>
+</div>
+
+<div class="container" style="width: 80%; align-items: center; display: inline-block; ">
+  <h2><b>Actionable Insights </b></h2>
+  <p class='intro'> 
+    1. Cars should be available from all price ranges. <br>
+    -- As 10000 to 40000 /- is the most sales happening price range and there are no cars available in 20000 to 36000 /- price bracket, procuring these price ranged cars should protentially improves the sales.<br><br>
+    2. Sense the customer likelyhood and market more such cars.<br>
+   -- Petrol and Diesel cars are most popular. <br>
+    -- Full wheel drive is most preferred in Crossovers and Front wheel drive in Sedan cars<br>
+    -- So bring more inventory from most value for money branded cars like Mercedes-Benz, Toyota, BMW, Volkswagen etc.. Crossovers with Full wheel drive Sedans with front wheel drive <br>
+    -- Luxury and Premium used cars booming sales due to hike in new car prices.<br><br>
+    3. Market & Procure more latest, future ready and sophisticated cars like Engine type other (Hybrid and Electric cars). Despite the fact that car sales fluctuated across years, the Other cars sales are consistent and seen ramp up in sales recently.<br><br>
+    4. Immediate tactical approach and Impressive strategic approach <br>
+    -- Tactical Approach <br>
+    Less preferred old cars should be announced with great deals and clear the stock. In that way we can save money, renting space for storage
+    Procure more demaded cars like Mercedes-Benz, BMW, Volkswagen, Toyota, Nissan, Ford, Audi.. etc <br>
+    -- Strategic Approach<br>
+    Economy cars are ideally most selling. And most recent economy car are gas engines which are not preferred by customers. So procure more Economy price range cars which is of Petrol or Diesel engine types<br>
+  </p>
+</div>
+
+       
+</body>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+  var graphs2 = {{graphJSON2 | safe}};
+  Plotly.plot('chart2',graphs2,{});
+  var graphs3 = {{graphJSON3 | safe}};
+  Plotly.plot('chart3',graphs3,{});
+  var graphs4 = {{graphJSON4 | safe}};
+  Plotly.plot('chart4',graphs4,{});
+  var graphs5 = {{graphJSON5 | safe}};
+  Plotly.plot('chart5',graphs5,{});
+  var graphs6 = {{graphJSON6 | safe}};
+  Plotly.plot('chart6',graphs6,{});
+  var graphs7 = {{graphJSON7 | safe}};
+  Plotly.plot('chart7',graphs7,{});
+  var graphs8 = {{graphJSON8 | safe}};
+  Plotly.plot('chart8',graphs8,{});
+  
+  var graphs9 = {{graphJSON9 | safe}};
+  Plotly.plot('chart9',graphs9,{});
+
+  var graphs10 = {{graphJSON10 | safe}};
+  Plotly.plot('chart10',graphs10,{});
+
+  var graphs11 = {{graphJSON11 | safe}};
+  Plotly.plot('chart11',graphs11,{});
+  
+  var graphs12 = {{graphJSON12 | safe}};
+  Plotly.plot('chart12',graphs12,{});
+
+  var graphs13 = {{graphJSON13 | safe}};
+  Plotly.plot('chart13',graphs13,{});
+
+  var graphs14 = {{graphJSON14 | safe}};
+  Plotly.plot('chart14',graphs14,{});
+
+  var graphs15 = {{graphJSON15 | safe}};
+  Plotly.plot('chart15',graphs15,{});
+  var graphs16 = {{graphJSON16 | safe}};
+  Plotly.plot('chart16',graphs16,{});
+
+  var graphs17 = {{graphJSON17 | safe}};
+  Plotly.plot('chart17',graphs17,{});
+
+  var graphs18 = {{graphJSON18 | safe}};
+  Plotly.plot('chart18',graphs18,{});
+
+  var graphs19 = {{graphJSON19 | safe}};
+  Plotly.plot('chart19',graphs19,{});
+  var graphs20 = {{graphJSON20 | safe}};
+  Plotly.plot('chart20',graphs20,{});
+  var graphs21 = {{graphJSON21 | safe}};
+  Plotly.plot('chart21',graphs21,{});
+
+  var graphs22 = {{graphJSON22 | safe}};
+  Plotly.plot('chart22',graphs22,{});
+  
+  
+  
+  
+</script>
+</html>
