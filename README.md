@@ -39,7 +39,9 @@ The secions include:-
 ![image](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)&nbsp;&nbsp;
 ![image](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)&nbsp;&nbsp;
 
-## UI Of The Web Application
+****
+
+##  🔴  UI Of The Web Application
 
 ### 1. Home Page
 <pre>
@@ -54,23 +56,29 @@ The secions include:-
 ### 3. Services Section
 <pre>
 <img src="https://user-images.githubusercontent.com/78292851/169814007-31865af6-b4e1-47e4-90d2-c74958e1aa38.png" width="1010"> 
+
 </pre>
 
 
 ### 4. Car Sales Analysis in Ukraine Section
 <pre>
-<img src="" width="1000"> <img src="" width="1000">
+  <img src="https://user-images.githubusercontent.com/78292851/170086342-1e258254-0d23-472b-8382-97debed02dfb.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086364-a2aa54b3-4488-49f2-89d6-36bb139bec27.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086388-67a28660-1aad-429b-81f2-7801e3874d7e.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086414-a372a2f3-3e0c-49dd-b626-d5d47715bd3f.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086444-b61e23cc-ea57-40ee-b52c-0e1889e0c8dd.png" width="1000"><img src="https://user-images.githubusercontent.com/78292851/170086490-927a5806-ed5a-46e8-992e-e946b7b319d7.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086523-9dfbc590-e337-435c-8201-9d869f304345.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086466-f8d8dacb-9280-4be7-a7a9-670ea24ca915.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086476-e6f4a4c4-1ce4-4ae3-a80f-94459dfeb10a.png" width="1000"> <img src="https://user-images.githubusercontent.com/78292851/170086544-59a71f33-854e-43e4-98f4-fab25b90946b.png" width="1000">
+
+
 </pre>
 
 ### 5. Car Sales Analysis in US Section
 <pre>
-<img src="" width="1010"> <img src="" width="1010">
+
 </pre>
 
 ### 6. Car Price Prediction Section
 <pre>
-<img src="" width="1010"> <img src="" width="1010">
+<img src="https://user-images.githubusercontent.com/78292851/170090657-fd6812dd-f841-4185-8171-41dd54a38fb1.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170090932-905fee51-208b-472e-9ca9-ce00a9cac98a.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170091291-6ca17e8c-3003-4f2e-8891-0f0a6381e49d.png" width="1010">
+
 </pre>
+
+
 
 ### 7. Contact Section
 <pre>
