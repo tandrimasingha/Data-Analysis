@@ -69,8 +69,10 @@ The secions include:-
 
 ### 5. Car Sales Analysis in US Section
 <pre>
+<img src="https://user-images.githubusercontent.com/78292851/170288306-2c5bdb31-04c3-4e9f-8500-d711bdf6168f.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170288575-fd23bcd2-d32c-4cac-9069-d5858ecd5917.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170288788-bda86818-2c1e-4794-9344-dc72869c3319.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170288799-b42224fe-bc24-49f8-aee2-5d1ce26923fd.png" width="1010"><img src="https://user-images.githubusercontent.com/78292851/170289514-a1410df2-b10a-4830-a286-a43acc058c95.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170289524-f4284424-349f-4b28-9a4d-827a7c3fa02f.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170289529-dac61cad-8f63-4f2e-9c7a-3f347cac3fff.png" width="1010"> <img src="https://user-images.githubusercontent.com/78292851/170289533-07610f18-119c-46f6-bcf7-fa989177c0eb.png" width="1010"><img src="https://user-images.githubusercontent.com/78292851/170289541-ebef583a-8e82-481e-8e57-53ab5596a7a3.png" width="1010">
 
 </pre>
+
 
 ### 6. Car Price Prediction Section
 <pre>
