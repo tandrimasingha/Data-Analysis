@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Car Sales Analysis</title>
+  
+  <style>
+    body {
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #ebb19f, #ecabc4, #c1eeff, #b0ebdd);
+      background-size: 50000% 50000%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    .main {
+      margin: auto;
+      max-width: fit-content;
+      padding: 10px;
+    }
+
+    h1 {
+      color: black;
+      font-family: cursive;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* .inner{
+  position:absolute;
+  } */
+    .container {
+      padding: 20px;
+      background-color: blanchedalmond;
+      margin-top: 25px;
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 5px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    p {
+      color: black;
+      font-family: cursive;
+
+    }
+
+    .containerf {
+      padding: 10px;
+      background-color: #aefce8;
+      margin: auto;
+      width: 50%;
+      height: fit-content;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 5px;
+      border: 2px solid black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <div class="main">
+    <div class="containerf">
+      <a href="#" style="text-decoration: none;">
+        <h1>Car Sales Complete Analysis and Trends</h1>
+      </a>
+    </div>
+    <div class="container" style="width: 80%; align-items: center; display: inline-block; ">
+      <p class='intro'><i>This is the Car sales Analysis which include information about different cars . This data set that we have used 
+        is being taken from the Car data in US for the purpose of different Analysis to make user understand the trends.
+        We will make a complete analysis about which feature has more impact on car sales and carry out result of this.</i></p>
+    </div>
+
+    <div class="container" style="width: 70%; align-items: center; display: inline-block; ">
+      <div id='chart' class='chart inner'></div>
+      <h2><b> Which model of car has the highest price?</b></h2>
+      <p class='chart'>The above plot gives us a complete analysis of how a car's Power factor is related with  
+        it's price.<br>
+        1. The Model which have power factor of 141 and highest price that is 85.5 thousand is
+        CL500.<br> 2. There is a high price dense between 15000 to 60000 in which the approx power factor is 50 to 100. <br>
+        3. The only model to have the highest  
+        power factor is Viper and that is 188 and the price is around 69000 which is a good model in low price.<br>
+        4. The lowest price is of Model Metro.
+      </p>
+    </div>
+
+    <div class="container" style="width: 60%; align-items: center; display: inline-block; ">
+      <div id='chart2' class='chart2 inner'></div>
+       <h2><b>Which manufacturer has the most model manufactured?</b></h2>
+      <p>This plot helps us to get a complete analysis of the top manufacturer with most model manufactured. <br>
+        1. The top model manufactured is Dodge and Ford with a count of 11. <br>
+        2. The second top manufacturer is Chevrolet, Toyota and Mercedes-B. We could see all the count
+        of each manufacturer.<br>
+        3. The lowest manufactured model is Infiniti and Jaguar.
+      </p>
+    </div>
+
+
+    <!-- <div class="side"> -->
+    <div class="container left" style="width: 40% ; float:left;">
+      <div id='chart3' class='chart3 inner'></div>
+      <h2><b>What is the most car's power factor range?</b></h2>
+      <p>This above plot is a Histogram where helps us to visualize the power factor with respect to its count where we can clearly visualize highest power factor.<br>
+        1. The power factor ranging from 65-85 has the most count that is 28.<br>
+        2. The power factor ranging from 45-54 has count of 25. <br>
+        3. The least count of power factor is between 15-24 and 185-195. <br></p>
+    </div>
+
+
+    <div class="container right" style="width: 40% ;float:right;">
+      <div id='chart4' class='chart4 inner'></div>
+      <h2><b>Which model has the most power factor?</b></h2>
+      <p> The Histogram clearly states the model with highest power factor. Lets have a detailed analysis.<br>
+        1. The highest Power factor is of Model Viper.<br>
+        2. There are most models with power factor around 70 and 80.<br>
+        3. The lowest power factor is of Town & country and CL.<br>
+        4. The second lowerst power factor is of Metro.<br>
+        5. The second highest power factor is of Corvette.
+
+      </p>
+    </div>
+    <!-- </div> -->
+
+
+    <div class="container" style="width: 40% ;float:left;">
+      <div id='chart5' class='chart5 inner'></div>
+      <h2><b>What is the range of maximum year resale value?</b></h2>
+      <p>
+        The next plot is the distribution of year resale value where we 
+        can see that <br>
+        1. The highest count of 38 ranges between 12.5K to 17.49K year resale value.<br>
+        2. We can also get the statistical value along with it which makes our analysis more accurate.<br>
+      3. The median of year resale value is 13K.<br>
+      4. Clearly we can see the year resale value greater than 32,000 is outlier that is wrong data.<br>
+    </p>
+    </div>
+    <div class="container" style="width: 40% ;float:right;">
+      <div id='chart9' class='chart9 inner'></div>
+      <h2><b>What is the range of price in whichb most cars are bought?</b></h2>
+      <p>This plot gives the user a analysis of how the Price of model is distributed along with its statistical value. <br>
+        1. The highest number of model has price ranging from 15-20 thousand with a approx count 38. <br>
+        2. The second highest number of model has price ranging from 20,000-25,000.<br>
+        3. The price of model greater that 34,000 is an outlier that is wrong data.<br>
+        4. The median of Price of cars is 22,000.
+
+      </p>
+    </div>
+
+
+
+    <div class="container left" style="width: 40%;  float:left;">
+      <div id='chart7' class='chart7 inner'></div>
+      <h2><b>What is the most used vehicle type?</b></h2>
+      <p>Now we can analyze the plot of most used vehicle type.<br>
+        1. We can see the passenger is the most used with a count of approx 116.<br>
+        2. The lowest is car with a count of 41.</p>
+    </div>
+
+    <div class="container" style="width: 40%;  float:right;">
+      <div id='chart12' class='chart12 inner'></div>
+      <h2><b>What is the most used car type year resale value?</b></h2>
+      <p> This is the plot of Car type year resale ratio which we calculate by finding the ratio of year resale value and vehicle type.<br>
+      1.  Here also we can see that the passenger has highest year resale ratio with 14.4 approx.<br>
+      2. The Vehicle type Car is having the year resale ratio of 11 approx.
+      </p>
+    </div>
+
+    <div class="container" style="width: 80%; align-items: center; display: inline-block; ">
+      <div id='chart6' class='chart6 inner'></div>
+      <h2><b> Which model has the most sales among all?</b></h2>
+      <p>This Bar plot helps us to understand the analysis of Model with its Sales. <br>
+        1. The highest sales in thousand  is of model F-series with a sales
+        of approx 5,40,000.<br>
+        2. The second highest is of Explorer with 2,70,000. <br>
+        3. The lowest sales is of Avenger model with a sales in thousand of approx 
+        4000. <br>
+      </p>
+    </div>
+
+    <div class="container right" style="width: 70%; align-items: center; display: inline-block;">
+      <div id='chart8' class='chart8 inner'></div>
+      <h2><b> Which manufacturer has the most price? </b></h2>
+      <p>This is a plot of manufacturer versus Price in thousand. <br>
+        1. Any user can visualize the plot and say that the highest price of manufacture is of Mercedes-b.<br>
+        2. The second highest is of Lexus. <br>
+        3. Infiniti has the lowest manufacturer price of 29,000.<br>
+      </p>
+    </div>
+
+    <div class="container" style="width: 60%; align-items: center; display: inline-block;">
+      <div id='chart10' class='chart10 inner'></div>
+      <h2><b> Which car brand has the most sales ratio? </b></h2>
+      <p>This interactive plot gives the analysis of car brand Sales thousand ratio that is Car Brand with respect to Sales in thousand ratio.<br>
+        1. The highest sales is of Ford and lowest is of Porsche. <br>
+        2. The second highest sale is Honda.<br>
+        3. We can conclude that Market is high for Ford but it is going down for Porsche.<br>
+        4. The market of Ford, Honda, Jeep, Dodge and Toyota is very good.
+      </p>
+    </div>
+
+
+    <div class="container" style="width: 70%; align-items: center; display: inline-block;">
+      <div id='chart11' class='chart11 inner'></div>
+      <h2><b> How sales of car is related to price of car?</b></h2>
+      <p>This interactive scatter plot shows us the distribution of sales and price of model.<br>
+        1. We can observe that sales is very dense 
+        between 0 to 1,00,000. <br> 
+        2. The price is very dense between 9000-40000. However after 2,00,000 there is almost no sales.<br>
+        3. The highest Price is CL500 and SL-Class.
+      </p>
+    </div>
+
+
+    <div class="container" style="width: 60%; align-items: center; display: inline-block;">
+      <div id='chart13' class='chart13 inner'></div>
+      <h2><b> Which Car Brand has the most year resale ratio?</b></h2>
+      <p>Firstly we calculate the year resale ratio and compare it with Car Brand. <br>
+        1. The brand with highest resale ratio Porsche and second highest 
+        is Audi.<br>
+        2.  However the lowest resale ratio is of Saturn. <br>
+        3. Model Jaguar, Saab and Volvo has no resale.
+      </p>
+    </div>
+
+    <div class="container" style="width: 70%; align-items: center; display: inline-block;">
+      <div id='chart14' class='chart14 inner'></div>
+      <h2><b> Which car brand has the most Price Ratio? </b></h2>
+      <p>After analyzing this bar chart plotted between Price in thousand ratio versus car brand. <br>
+        1. Clearly the highest price in thousand ratio is Porsche.<br>
+        2. The secong highest is Mercedes-Benz.<br>
+        3. The lowest is Hyundai whereas Acura and Chrysler have no price ratio. 
+      </p>
+    </div>
+
+
+    <div class="container" style="width: 60%; align-items: center; display: inline-block;">
+      <div id='chart15' class='chart15 inner'></div>
+      <h2><b>  Which Car Brand has the most year resale ratio?</b></h2>
+      <p>In this plot Firstly we calculate the year resale ratio and compare it with Car Brand. 
+        1. The brand with highest resale ratio Porsche.<br> 
+        2. The second highest is Audi. <br>
+        3. However the lowest resale ratio is of Saturn whereas Jaguar, Saab and Volvo has no resale.</p>
+    </div>
+
+
+    <div class="container" style="width: 70%; align-items: center; display: inline-block;">
+      <div id='chart16' class='chart16 inner'></div>
+      <h2><b> Which model has the most Engine size and Horse Power?</b></h2>
+      <p>This plot shows us the analysis of Engine size and horse power along with the model. 
+        1. The highest horsepower and engine size is of Model Viper of 450 and 8.<br>
+        2. However horse power is very dense between 150 to 250 and engine size is dense between 2 to 4.<br>
+        3. The lowest Horsepower and engine size is of Metro<br>
+        </p>
+    </div>
+
+
+    <div class="container last" style="width: 1000px;align-items: center; display: inline-block; ">
+      <div id='chart17' class='chart17 inner'></div>
+      <h2><b> Analysis of Price in thousand, sales in thousand and year resale value.</b></h2>
+      <p>Here we can see a scatter 3d plot which gives the analysis of three parameter and how they are related and that is price in thousand
+        ,sales in thousand and year resale value.<br>
+        1. We can relate them with model, fuel capacity, fuel efficiency, horse power and engine size.
+         We can get the whole analysis with each parameter.
+      </p>
+    </div>
+
+
+  </div>
+
+
+
+</body>
+
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+<script type='text/javascript'>
+  var graphs = {{ graphJSON | safe}}
+  Plotly.plot('chart', graphs, {})
+
+  var graphs2 = {{ graphJSON2 | safe}}
+  Plotly.plot('chart2', graphs2, {})
+
+  var graphs3 = {{ graphJSON3 | safe}}
+  Plotly.plot('chart3', graphs3, {})
+
+  var graphs4 = {{ graphJSON4 | safe}}
+  Plotly.plot('chart4', graphs4, {})
+
+  var graphs5 = {{ graphJSON5 | safe}}
+  Plotly.plot('chart5', graphs5, {})
+
+  var graphs6 = {{ graphJSON6 | safe}}
+  Plotly.plot('chart6', graphs6, {})
+
+  var graphs7 = {{ graphJSON7 | safe}}
+  Plotly.plot('chart7', graphs7, {})
+
+  var graphs8 = {{ graphJSON8 | safe}}
+  Plotly.plot('chart8', graphs8, {})
+
+  var graphs9 = {{ graphJSON9 | safe}}
+  Plotly.plot('chart9', graphs9, {})
+
+  var graphs10 = {{ graphJSON10 | safe}}
+  Plotly.plot('chart10', graphs10, {})
+
+  var graphs11 = {{ graphJSON11 | safe}}
+  Plotly.plot('chart11', graphs11, {})
+
+  var graphs12 = {{ graphJSON12 | safe}}
+  Plotly.plot('chart12', graphs12, {})
+
+  var graphs13 = {{ graphJSON13 | safe}}
+  Plotly.plot('chart13', graphs13, {})
+
+  var graphs14 = {{ graphJSON14 | safe}}
+  Plotly.plot('chart14', graphs14, {})
+
+  var graphs15 = {{ graphJSON15 | safe}}
+  Plotly.plot('chart15', graphs15, {})
+  var graphs16 = {{ graphJSON16 | safe}}
+  Plotly.plot('chart16', graphs16, {})
+
+  var graphs17 = {{ graphJSON17 | safe}}
+  Plotly.plot('chart17', graphs17, {})
+
+</script>
+
+</html>
