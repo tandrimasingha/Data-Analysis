@@ -87,3 +87,16 @@ The secions include:-
 <img src="https://user-images.githubusercontent.com/78292851/169813945-a45eef32-58f8-4a2a-8e39-d3e571daf567.png" width="1010"> 
 </pre>
 
+
+## Run Locally
+
+Open VSCode -
+
+1.1 `git clone <repo link>`
+
+1.2 `cd MedHelp-HackHealth`
+
+1.3 `pip install -r requirements.txt `
+
+1.4 `flask run`
+
