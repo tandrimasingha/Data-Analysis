@@ -41,6 +41,17 @@ The secions include:-
 
 ****
 
+
+## Structure Of The Project
+
+- The home page consists of an about section, a services section and a contact section where in the section you will find three options i.e, car Sales Analysis in Ukraine, Car Sales Analysis in US and Car Price Prediction.
+- In the first section, there is Car Sales Analysis in Ukraine where there are different queries answered related to recent Car Sales in Ukraine in form of different visualization using Plotly.
+- The next section consists of Car Sales Analysis in US where different quires are answered in form of visualization related to Car Sales in US. The user get to know about the different trends in automotive industry. 
+- Using the above two analysis, we can get a complete understanding about the automotive industry. 
+- The last section consistes of Used Car price prediction where the Machine Learning Model uses the Lasso Regression to predict the price of the car.
+- The prediction section consists of forms which take few different feature as input from the user in a given specified range. The most relevant features are taken into consideration for prediction also these features
+- So the user can get a complete analysis of the current trends related to automotive industry and Car sales. 
+
 ##  🔴  UI Of The Web Application
 
 ### 1. Home Page
@@ -94,7 +105,7 @@ Open VSCode -
 
 1.1 `git clone <repo link>`
 
-1.2 `cd MedHelp-HackHealth`
+1.2 `cd Data-Analysis`
 
 1.3 `pip install -r requirements.txt `
 
