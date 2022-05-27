@@ -52,6 +52,14 @@ The secions include:-
 - The prediction section consists of forms which take few different feature as input from the user in a given specified range. The most relevant features are taken into consideration for prediction also these features
 - So the user can get a complete analysis of the current trends related to automotive industry and Car sales. 
 
+
+## Model Deployment
+
+- The web application is built using python library -> Flask and Web Programming languages -> HTML, CSS, Bootstrap
+- The entire application is finally deployed on Heroku by adding - Procfile (informs Heroku that which application is to be run first), Requirements (notifies Heroku about the libraries that needs to be installed before deploying or running our application)
+- See the deployed application [here](https://data-auto-visual.herokuapp.com/).
+
+
 ##  🔴  UI Of The Web Application
 
 ### 1. Home Page
