@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+
+<head>
+    <title>Car Price Prediction</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    /* Various CSS stylings added  */
+    body {
+        background-color: #c9d8f3;
+    }
+
+    .container {
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formm {
+        margin: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        height: 40px;
+        width: 1000px;
+    }
+
+    select {
+        height: 40px;
+        width: 1000px;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        font-size: 50px;
+    }
+
+    img {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .navbar {
+        background-color: #2b2d42;
+    }
+
+    .sub {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .btn{
+        height: 50px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1> Car Price Prediction</h1>
+
+        <div class="formm">
+            <form action="{{ url_for('predict')}}" method="post">
+
+                <h5>Enter the Year:</h5>
+                <input id="first" name="Year" type="number" placeholder="Year:">
+                <br><br>
+                <h5>Enter the Showroom Price(In lakhs):</h5>
+                <input id="second" name="Present_Price" required="required" placeholder="Showroom Price(In lakhs):">
+                <br><br>
+                <h5>Enter the no of Kilometers Drived:</h5>
+                <input id="third" name="Kms_Driven" required="required" placeholder="No of Kilometers Drived:">
+                <br><br>
+                <h5>Enter the no of owners:</h5>
+                <input id="fourth" name="Owner" required="required" placeholder="No of owners:">
+                <br><br>
+                <h5>Enter the Fuel type:</h5>
+                <select name="Fuel_Type_Petrol" id="fuel" required="required">
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Diesel">CNG</option>
+                </select>
+                <br><br>
+                <h5>Enter the seller Type:</h5>
+                <select name="Seller_Type_Individual" id="resea" required="required">
+                    <option value="Dealer">Dealer</option>
+                    <option value="Individual">Individual</option>
+                </select>
+                <br><br>
+                <h5>Enter the Transmission type</h5>
+                <select name="Transmission_Manual" id="research" required="required">
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+                <br><br><br>
+                <div class="sub">
+                    <button id="sub" type="submit" class="btn btn-primary">Predict the price</button>
+                </div>
+
+
+
+
+
+            </form>
+            <div class="alert alert-info" role="alert">
+            <h3 style="color: darkblue;">{{ prediction_text }}<h3>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
