@@ -1,3 +1,4 @@
+#importing the required libraries
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import pickle
@@ -19,35 +20,41 @@ app = Flask(__name__,
             static_folder='static',
             template_folder='templates')
 
-
+#home page - routing to the home page is done
 @app.route('/')
 def home():
+    #renders the home page template 
     return render_template('index.html')
 
 
-
+#routing to the car price prediction page
 @app.route('/i')
 def i():
     return render_template('i.html')
 
+#routing to the Car Sales Analysis in Ukraine page
 @app.route('/z',methods=['GET'])
+#portion for data visualization and analysis for Car Sales Analysis in Ukraine
 def visualize1():
+     #reading the dataset
     carsales_df = pd.read_csv('car_ad.csv',encoding='ISO-8859-1')
     df = pd.DataFrame(carsales_df.car.value_counts())
+    #Histogram plot of car brand along with sales
     fig = px.histogram(carsales_df,
                    x='car',
                    color='car',
                    marginal='box',
                    title='Car Brand along with their Sales')
     fig.update_layout(bargap=0.1)
-  
+    #convert the plot to JSON using json.dumps() and the JSON encoder that comes with Plotly
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     
     carsales_year_df = pd.DataFrame(carsales_df.groupby('year').car.value_counts())
     carsales_year_df.rename(columns={'car':'sales'}, inplace=True)
     carsales_year_df.reset_index(inplace=True)
     topCarBrandSales = carsales_year_df[carsales_year_df.car.isin(df.head(5).index)]
-    fig2= px.line(topCarBrandSales, x="year", y="sales", color='car')
+    fig2= px.line(topCarBrandSales, x="year", y="sales", color='car') # line plot for top car brand sales
+     #convert the plot to JSON using json.dumps() and the JSON encoder that comes with Plotly
     graphJSON2 = json.dumps(fig2, cls=plotly.utils.PlotlyJSONEncoder)
     
     recentCarSalesTopBrands = carsales_year_df[carsales_year_df.car.isin(df.head(5).index) &  (carsales_year_df.year >= 2010)]
@@ -55,12 +62,17 @@ def visualize1():
     fig3=px.line(recentCarSalesTopBrands, x='year', y='sales', color='car')
     graphJSON3 = json.dumps(fig3, cls=plotly.utils.PlotlyJSONEncoder)
     
+     
+    # function to get sales by year
     def get_SalesByYear(year):
         return carsales_year_df[carsales_year_df.year == year]
+    # function to get sales rank by year
     def get_CarSalesRankByYear(r):
         result = get_SalesByYear(r.year).sales.unique()
         i, = np.where(result == r.sales)
         return i[0]+1
+
+    # preprocessing the datset to get the analysis perfectly.
     carsales_year_df['year_rank'] = carsales_year_df.apply(get_CarSalesRankByYear, axis=1)
     recenttopcars = carsales_year_df[(carsales_year_df.year_rank <=5) &  (carsales_year_df.year >= 2009)].car.unique()
     topcarbrands = carsales_year_df[(carsales_year_df.year_rank <=5) &  (carsales_year_df.year >= 1980)].car.unique()
@@ -68,9 +80,11 @@ def visualize1():
     recentCarSalesRanks.pivot_table(index=['year'], columns={'car'}, values='sales')
     recentCarSalesRanks.pivot_table(index=['year'], columns={'car'}, values='year_rank')
     fig4=px.scatter(recentCarSalesRanks, x='year', y='sales', color='car')
+    #convert the plot to JSON using json.dumps() and the JSON encoder that comes with Plotly
     graphJSON4 = json.dumps(fig4, cls=plotly.utils.PlotlyJSONEncoder)
     
     fig5=px.scatter(recentCarSalesRanks, x='year', y='year_rank', color='car')
+    #convert the plot to JSON using json.dumps() and the JSON encoder that comes with Plotly
     graphJSON5 = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
     
     carsales_df[carsales_df.price.isin(carsales_df.price.nlargest(10))].sort_values('price', ascending=False)
@@ -87,7 +101,7 @@ def visualize1():
     
     fig6=px.scatter(cars_with_max_price_df.sort_values('max_price', ascending=False).head(10), x='recently_sold_on', y='max_price', color='car')
     graphJSON6 = json.dumps(fig6, cls=plotly.utils.PlotlyJSONEncoder)
-    
+    # classifing the class column in the dataset
     def classify_class(r):
         if r.price <= 10000:
             return "Economy"
@@ -214,7 +228,7 @@ def visualize1():
     
     
    
-    
+    ## this line tells Flask to use an HTML template called visual1.html and pass to it the JSON code
     return render_template('visual1.html', graphJSON=graphJSON,graphJSON2=graphJSON2,graphJSON3=graphJSON3,graphJSON4=graphJSON4,
                            graphJSON5=graphJSON5,graphJSON6=graphJSON6,graphJSON7=graphJSON7,graphJSON8=graphJSON8,graphJSON9=graphJSON9,
                            graphJSON10=graphJSON10,graphJSON11=graphJSON11,graphJSON12=graphJSON12,graphJSON13=graphJSON13,
@@ -513,7 +527,7 @@ def visualize2():
                             'yanchor': 'top' })
     graphJSON17 = json.dumps(fig17, cls=plotly.utils.PlotlyJSONEncoder)
     
-    
+    # this line tells Flask to use an HTML template called visual2.html and pass to it the JSON code
     return render_template('visual2.html', graphJSON=graphJSON, graphJSON2=graphJSON2, graphJSON3=graphJSON3, graphJSON4=graphJSON4,graphJSON5=graphJSON5,
                            graphJSON6=graphJSON6,graphJSON7=graphJSON7,graphJSON8=graphJSON8,graphJSON9=graphJSON9,graphJSON10=graphJSON10,
                            graphJSON11=graphJSON11,graphJSON12=graphJSON12,graphJSON13=graphJSON13,graphJSON14=graphJSON14,graphJSON15=graphJSON15,graphJSON16=graphJSON16,graphJSON17=graphJSON17)
@@ -525,6 +539,7 @@ def visualize2():
 def predict():
     Fuel_Type_Diesel=0
     if request.method == 'POST':
+        # input for the form 
         Year = int(request.form['Year'])
         Present_Price=float(request.form['Present_Price'])
         Kms_Driven=int(request.form['Kms_Driven'])
@@ -548,8 +563,11 @@ def predict():
             Transmission_Manual=1
         else:
             Transmission_Manual=0
+         
+        #predict the output on basis of the features fed to the model
         prediction=model.predict([[Present_Price,Kms_Driven2,Owner,Year,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type_Individual,Transmission_Manual]])
         output=round(prediction[0],2)
+         #on basis of prediction displaying the desired output
         if output<0:
             return render_template('i.html',prediction_texts="Sorry you cannot sell this car")
         else:
@@ -557,5 +575,6 @@ def predict():
     else:
         return render_template('i.html')
 
+#debug is set to True in development environment and set to False in production environment
 if __name__=="__main__":
     app.run(debug=True)
