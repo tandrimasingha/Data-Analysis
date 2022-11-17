@@ -7,7 +7,7 @@ gunicorn==19.9.0
 idna==3.3
 itsdangerous==2.1.2
 Jinja2==3.1.1
-joblib==1.1.0
+joblib==1.2.0
 MarkupSafe==2.1.1
 numpy==1.22.0
 pandas==1.4.2
